@@ -41,7 +41,6 @@ export class Url {
   update(data) {
     const urlPattern = new UrlPattern(this.pattern);
     const result = {...this.match(), ...data};
-    console.log(result);
     const value = urlPattern.stringify(result);
     if (value) {
       this.link.pathname = value;
