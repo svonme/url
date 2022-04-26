@@ -16,5 +16,5 @@ export const omit = function (data, keys = []) {
       return result;
     }, {});
   }
-  return data;
+  return data || {};
 }

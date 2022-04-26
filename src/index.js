@@ -34,6 +34,7 @@ export class Url {
         this.link.pathname = value || "/";
       }
     }
+    return this.link.pathname;
   }
 
   // 根据规则生成路径并修改
@@ -53,14 +54,14 @@ export class Url {
       }
     });
     this.link.query = _.omit(query, omit);
+    return this.link.pathname;
   }
 
   // 根据规则解析 url 中的变量
   match() {
     const urlPattern = new UrlPattern(this.pattern);
     const value = urlPattern.match(this.link.pathname);
-    console.log(value, this.pattern, this.link.pathname);
-    return Object.assign(_.omit(value, ["_"]), this.link.query);
+    return Object.assign(_.omit(value, ["_"]), this.link.query || {});
   }
 
   stringify() {
