@@ -1,14 +1,25 @@
+/**
+ * @file Url
+ * @author svon.me@gmail.com
+ */
+
+declare interface Link {
+	protocol?: string;
+	host?: string;
+	query: object;
+	pathname: string;
+}
 
 declare class Url {
 	/**
 	 * @param link url 链接
 	 */
-	constructor(link: string)
+	constructor(link: string | Link)
 	/**
 	 * @param link url 链接
 	 * @param pattern url 规则
 	 */
-	constructor(link: string, pattern: RegExp | string)
+	constructor(link: string | Link, pattern: RegExp | string)
 
 	/**
 	 * 路径操作, 同终端命令 cd 相同功能
@@ -36,7 +47,7 @@ declare class Url {
 	/**
 	 * 获取 url 对象
 	 */
-	parse(): object
+	parse(): Link
 }
 
 export { Url }

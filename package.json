@@ -1,16 +1,14 @@
 {
   "name": "@fengqiaogang/url",
-  "description": "url 常用方法",
-  "version": "1.0.1",
+  "description": "url",
+  "version": "1.0.2",
   "main": "dist/url.js",
   "types": "types/url.d.ts",
   "devDependencies": {
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
   },
-  "scripts": {
-    "build": "webpack"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/svonme/url.git"
