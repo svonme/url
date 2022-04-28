@@ -1,8 +1,8 @@
 {
   "name": "@fengqiaogang/url",
   "description": "url",
-  "version": "1.0.2",
-  "main": "dist/url.js",
+  "version": "1.0.3",
+  "main": "src/index.js",
   "types": "types/url.d.ts",
   "devDependencies": {
     "webpack": "^5.72.0",
@@ -30,6 +30,7 @@
   },
   "files": [
     "dist/",
+    "src/",
     "types/",
     "README.md",
     "package.json"
